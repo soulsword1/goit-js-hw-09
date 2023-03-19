@@ -25,11 +25,10 @@ const options = {
     const chosenDate = selectedDates[0];
     if (chosenDate < nowDate && !startBtnActive) {
       Notify.warning('Please choose a date in the future');
-    } else if (chosenDate > nowDate) {
+    } else if(startBtnActive){
+      Notify.info('Reload the page to start a new timer');
+    }else{
       refs.startBtn.removeAttribute('disabled', '');
-      // const diffMilliseconds = chosenDate.getTime() - new Date.getTime();
-      // console.log(diffMilliseconds);
-
       refs.startBtn.addEventListener('click', startTimer(chosenDate), 1000);
     }
   },
