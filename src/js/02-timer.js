@@ -28,6 +28,7 @@ const options = {
     } else if(startBtnActive){
       Notify.info('Reload the page to start a new timer');
     }else{
+      Notify.success('The timer has been started');
       refs.startBtn.removeAttribute('disabled', '');
       refs.startBtn.addEventListener('click', startTimer(chosenDate), 1000);
     }
