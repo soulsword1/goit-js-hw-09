@@ -24,7 +24,7 @@ function operatingWithPromises(event){
   const step = Number(event.target.elements.step.value);
   const amount = Number(event.target.elements.amount.value);
 
-    for( i = 0; i < amount; i += 1){
+    for(let i = 0; i < amount; i += 1){
     createPromise(position, delay).then().catch();
     position += 1;
     delay += step;
