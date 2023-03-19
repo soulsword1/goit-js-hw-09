@@ -1,0 +1,21 @@
+.timer {
+  font-family: Helvetica, Arial, sans-serif;
+  display: flex;
+  margin-top: 25px;
+}
+
+.field {
+  background: #d3d4da;
+  color: #444;
+  border-radius: 5%;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.field span {
+  font-size: 30px;
+  padding: 0.2em;
+}
+
+.field:not(:last-of-type) {
+  margin-right: 10px;
+}
